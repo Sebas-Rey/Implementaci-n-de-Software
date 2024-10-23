@@ -1,0 +1,419 @@
+:root{
+    --primary-color: #0067ac;
+    --navbar-color: #004f83;
+    --color-second: #0067ac;
+
+    /*---- Box Shadows ----*/
+    --primary-shadow: 0px 10px 20px 0px var(--primary-color);
+    --second-shadow: 10px 1px 20px 8px var(--primary-color);
+    --third-shadow: -10px 1px 20px 8px var(--primary-color);
+    --fourth-shadow: 0px -9px 20px 8px var(--primary-color);
+
+    --right-top-shadow: 10px -10px 20px 0px var(--primary-color);
+    --right-bottom-shadow: 10px 10px 20px 0px var(--primary-color);
+    --left-top-shadow: -10px -10px 20px 0px var(--primary-color);
+    --left-bottom-shadow: -10px 10px 20px 0px var(--primary-color);
+}
+
+.t-container{
+    box-shadow: var(--fourth-shadow);
+}
+.r-container{
+    box-shadow: var(--second-shadow);
+}
+.l-container{
+    box-shadow: var(--third-shadow);
+}
+.b-container{
+    box-shadow: var(--primary-shadow);
+}
+
+.rt-container {
+    box-shadow: var(--right-top-shadow);
+}
+.rb-container{
+    box-shadow: var(--right-bottom-shadow);
+}
+.lt-container{
+    box-shadow: var(--left-top-shadow);
+}
+.lb-container{
+    box-shadow: var(--left-bottom-shadow);
+}
+
+.container{
+    min-width: 400px;
+    margin: 2rem 0;
+    background: var(--color-white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    transition: transform .3s ease-in-out;
+}
+
+.container:hover{
+    transform: translateY(-10px);
+}
+
+.main-container{
+    box-shadow: var(--primary-shadow);
+}
+
+/*---- Arctículo 1 ----*/
+
+.primary-article{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.primary-article .section-one{
+    max-width: 740px;
+    box-shadow: var(--left-bottom-shadow);
+}
+
+.primary-article .section-two{
+    max-width: 740px;
+    box-shadow: var(--right-bottom-shadow);
+}
+
+/*---- Arctículo 2 ----*/
+
+.second-article .expl-container{
+    box-shadow: var(--primary-shadow);
+}
+
+.second-article .info-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+    box-shadow: var(--primary-shadow);
+}
+
+.second-article .info-container .card{
+    width: min(100% - 50px, 800px);
+    min-height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 325px;
+    text-align: center;
+    border: 1px solid #b4b4b4;
+    border-radius: 10px;
+    transition: box-shadow .3s ease-in-out;
+}
+.second-article .info-container .card:hover{
+    box-shadow: 0px 5px 10px 0px #b4b4b4;
+}
+
+.second-article .info-container .card img{
+    width: 200px;
+    margin: 15px 0;
+}
+
+/*---- Arctículo 3 ----*/
+
+.third-article .flex-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.third-article .flex-container .container{
+    display: flex;
+    flex-direction: column;
+}
+.third-article .flex-container img{
+    margin: 20px auto;
+    width: max(100% - 25px, 200px);
+    border-radius: 5px;
+}
+
+.third-article .flex-container .medium-width{
+    max-width: 700px;
+    height: 43%;
+    display: flex;
+    justify-content: center;
+}
+
+/*---- Arctículo 4 ----*/
+
+.fourth-article .slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth-article .slider{
+    background-color: #fff;
+    width: 1200px;
+    height: 650px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fourth-article .slides{
+    width: 500%;
+    height: 650px;
+    display: flex;
+}
+
+.fourth-article .slides input{
+    display: none;
+}
+
+.fourth-article .slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.fourth-article .slide img{
+    width: 1200px;
+    height: 650px;
+}
+
+.fourth-article .navigation-manual{
+    position: absolute;
+    width: 1200px;
+    margin-top: 670px;
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-article .manual-btn{
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.fourth-article .manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.fourth-article .manual-btn:hover{
+    background: var(--primary-color);
+}
+
+.fourth-article #radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+.fourth-article #radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+.fourth-article #radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+.fourth-article #radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+.fourth-article .navigation-auto{
+    position: absolute;
+    width: 1200px;
+    margin-top: 670px;
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-article .navigation-auto div{
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+.fourth-article #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: var(--primary-color);
+}
+
+.fourth-article #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: var(--primary-color);
+}
+
+.fourth-article #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: var(--primary-color);
+}
+
+.fourth-article #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: var(--primary-color);
+}
+
+/*---- Arctículo 5 ----*/
+
+.fifth-article .info-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: none;
+    box-shadow: var(--primary-shadow);
+}
+
+.fifth-article .div-content{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /*height: 0;*/
+    align-items: center;
+    justify-content: space-around;
+    /*overflow: hidden;
+    transition: 1s ease;
+    z-index: -1;*/
+}
+
+/*.fifth-article:hover .hover .div-content{
+    height: 380px;
+}*/
+
+.fifth-article .div-content div{
+    position: relative;
+    max-width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .5s ease-in;
+}
+
+.fifth-article .div-content img{
+    min-width: 350px;
+}
+
+.fifth-article .div-content .paragraph{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    background: var(--color-white);
+    line-height: 50px;
+}
+
+.fifth-article .div-content div:hover .paragraph{
+    top: 0;
+}
+
+/*---- Artículo 6 ----*/
+
+.sixth-article section .div-content{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.sixth-article .div-content div{
+    position: relative;
+    max-width: 725px;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sixth-article .div-content div img{
+    margin: 50px auto;
+    width: 300px;
+}
+
+/*---- Artículo 7 ----*/
+
+.seventh-article .flex-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.seventh-article .flex-container .container{
+    max-width: 700px;
+    height: 45.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seventh-article .flex-container .container div{
+    margin: 15px 0;
+    padding-bottom: 20px;
+}
+
+.seventh-article .flex-container .container .border{
+    border-bottom: 1px solid #b4b4b4;
+}
+
+/*---- Artículo 8 ----*/
+
+.eighth-article .flex-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.eighth-article .flex-container .container{
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eighth-article .flex-container .container li{
+    margin: 20px 0;
+}
+
+.eighth-article .flex-container div img{
+    margin: 50px auto 0;
+    width: max(100% - 100px, 100px);
+}
+
+.eighth-article .flex-container .container div{
+    margin: 15px 0;
+    padding-bottom: 20px;
+}
+
+.eighth-article .flex-container .container .border{
+    border-bottom: 1px solid #b4b4b4;
+}
+
+/*----  Artículo 9 ----*/
+
+.ninth-article section{
+    display: flex;
+    flex-direction: column;
+}
+
+.ninth-article img{
+    margin: 50px auto;
+    width: max(60% - 100px, 100px);
+    border-radius: 5px;
+}
+
+/*---- Artículo 10 ----*/
+
+.tenth-article .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.tenth-article .container img{
+    margin: 50px auto;
+    width: max(60% - 100px, 100px);
+    border-radius: 5px;
+}

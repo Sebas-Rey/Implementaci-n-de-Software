@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Heading Now;
+    src: url(/font/Heading-Now-74-Regular-trial.ttf);
+}
+@font-face {
+    font-family: Codec Pro;
+    src: url(/font/CodecPro-Regular.ttf);
+}
+
+:root{
+    --color-body: #00010f/*#e4e9f7*/;
+    --color-white: #fff;
+    --margin-body: 4rem 9rem 4rem 14rem;
+    --margin-body-responsive: 4rem 9% 4rem 20%;
+    --padding: 2rem 4rem;
+    --border-radius: 10px;
+    --margin-article: 10rem 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--color-body);
+}
+
+
+
+@media (width > 1400px) {
+    main, .container-fluid{
+        margin: var(--margin-body);
+    }
+}
+
+@media (width < 1400px) {
+    main, .container-fluid{
+        margin: var(--margin-body-responsive);
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: Heading Now;
+}
+
+p, a, span{
+    font-family: Codec Pro;
+}
+
+p{
+    font-size: 20px;
+}
+
+article, section{
+    justify-content: center;
+}
+.main-title{
+    max-width: 800px;
+    min-width: 400px;
+    margin: 5rem auto;
+    font-size: 3rem;
+    color: var(--color-white);
+    border-bottom: 5px solid var(--primary-color);
+}
+.container-fluid article{
+    margin: var(--margin-article);
+}

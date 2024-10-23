@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modlo 2</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/modulo2.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav class="sidebar">
+            <div>
+                <div class="logo_details">
+                    <i class='bx bxs-book icon'></i>
+                    <div class="logo_name">Módulos</div>
+                    <i class="bx bx-menu" id="btn"></i>
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <i class="bx bx-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                    <span class="tooltip">Buscar</span>
+                </li>
+                <li>
+                    <a href="/html/modulo1.html" class="nav-link" id="active">
+                        <i class="bx bx-grid-alt"></i>
+                        <span class="link_name">Módulo 1</span>
+                    </a>
+                    <span class="tooltip">Módulo 1</span>
+                </li>
+                <li>
+                    <a href="/html/modulo2.html" class="nav-link">
+                        <i class="bx bx-user"></i>
+                        <span class="link_name">Módulo 2</span>
+                    </a>
+                    <span class="tooltip">Módulo 2</span>
+                </li>
+                <li>
+                    <a href="/html/bibliografia.html" class="nav-link">
+                        <i class="bx bx-folder"></i>
+                        <span class="link_name">Bibliografía</span>
+                    </a>
+                    <span class="tooltip">Bibliografía</span>
+                </li>
+                <li class="profile">
+                    <div class="profile_details">
+                        <div class="profile_content">
+                            <div class="name">Volver al Inicio</div>
+                            <div class="designation">Portada de presentación</div>
+                        </div>
+                    </div>
+                    <a href="/index.html">
+                        <i class="bx bx-log-out" id="log_out"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        <main class="container main-container">
+            <h1>Hola</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda, accusamus, quod tenetur nisi enim at impedit temporibus praesentium optio beatae magnam repellat eum consequuntur ipsum, sed omnis? Maxime, dolores?</p>
+        </main>
+    </header>
+
+    <div class="container-fluid">
+        <article class="primary-article">
+            <section class="container section-one">
+                <h2>Hola</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus dolorum odio veritatis maxime vitae nihil, nemo molestiae doloremque vel. Sequi rerum eligendi iste earum distinctio!</p>
+            </section>
+            <section class="container section-two">
+                <h2>Hola</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus dolorum odio veritatis maxime vitae nihil, nemo molestiae doloremque vel. Sequi rerum eligendi iste earum distinctio!</p>
+            </section>
+        </article>
+    </div>
+
+    <article class="comentarios">
+        <h1>Comentarios</h1>
+        <section class="formulario">
+            <div>
+                <img src="/img/note2.svg" alt="">
+            </div>
+            <div>
+                <form action="https://formsubmit.co/portspeak00@gmail.com" method="POST" autocomplete="off">
+                    <div class="input-box">
+                        <i class='bx bx-user'></i>
+                        <input class="text" name="name" type="text" placeholder="Nombre y Apellido" required>
+                    </div>
+                    <div class="input-box">
+                        <i class='bx bx-envelope-open'></i>
+                        <input class="asunto text" name="name" type="text" placeholder="Asunto">
+                    </div>
+                    <textarea class="text" name="message" id="mensaje" cols="50" rows="10" placeholder="Mensaje" required></textarea>
+                    <input class="submit text" type="submit" value="Enviar Mensaje">
+        
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/html/modulo1.html"> <!--Cambiar value por el directorio real cuando se suba la pag web-->
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </section>
+        <section class="check-modal">
+            <div class="modal-container">
+                <span class="close-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                </span>
+                <div class="modal-content">
+                    <img src="/img/quality-check.svg" alt="">
+                    <h2 class="modal-title">Tu comentario ha sido enviado exitosamente</h2>
+                    <p>¡Muchas gracias!</p>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/modal.js"></script>
+</body>
+</html>

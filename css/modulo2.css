@@ -1,0 +1,47 @@
+:root{
+    --primary-color: #d87700;
+    --navbar-color: #e77f00;
+    --color-second:#ff9a1f;
+
+    /*---- Box Shadows ----*/
+    --primary-shadow: 0px 10px 20px 0px var(--primary-color);
+    --right-top-shadow: 10px -10px 20px 0px var(--primary-color);
+    --right-bottom-shadow: 10px 10px 20px 0px var(--primary-color);
+    --left-top-shadow: -10px -10px 20px 0px var(--primary-color);
+    --left-bottom-shadow: -10px 10px 20px 0px var(--primary-color);
+}
+
+.main-container, .container-fluid{
+    margin: var(--margin-body);
+}
+.container{
+    background: var(--color-white);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+}
+
+.container:hover{
+    transform: translateY(-10px);
+    transition: transform .3s ease-in-out;
+}
+.container:hover::after{
+    transform: translateY(-10px);
+}
+
+.main-container{
+    box-shadow: var(--primary-shadow);
+}
+
+.primary-article{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.primary-article .section-one{
+    box-shadow: var(--left-bottom-shadow);
+}
+
+.primary-article .section-two{
+    box-shadow: var(--right-bottom-shadow);
+}

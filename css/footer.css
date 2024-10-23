@@ -1,0 +1,145 @@
+/*---- Comentarios ----*/
+.comentarios{
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios h1{
+    margin: 100px 25% 40px 25%;
+    font-size: 3rem;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formulario div{
+    display: flex;
+}
+
+.formulario img{
+    width: 600px;
+}
+
+form{
+    width: min(100% - 3rem, 800px);
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box{
+    width: 100%;
+    position: relative;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    margin: 3px;
+    padding: 10px;
+}
+
+.input-box i{
+    position: absolute;
+    margin-left: 5px;
+    color: var(--primary-color);
+}
+
+.input-box input{
+    
+    border: none;
+    margin-left: 30px;
+    outline: none;
+}
+
+form textarea{
+    width: 100%;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    outline: none;
+}
+
+.submit{
+    width: 50%;
+    height: 3rem;
+    text-align: center;
+    background: var(--navbar-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+.submit:hover{
+    background: var(--primary-color);
+}
+
+/*---- Modal ----*/
+.check-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111bd;
+    display: flex;
+    opacity: 0;
+    padding: var(--padding);
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+.modal-container{
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 2em 2.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-modal{
+    display: flex;
+    justify-content: end;
+}
+
+.close-modal svg{
+    width: 30px;
+    cursor: pointer;
+    filter: invert(28%) sepia(10%) saturate(7483%) hue-rotate(327deg) brightness(107%) contrast(114%);
+}
+
+.close-modal svg:hover{
+    filter: invert(68%) sepia(87%) saturate(5458%) hue-rotate(331deg) brightness(104%) contrast(100%);
+}
+
+.modal-content{
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+.modal-title{
+    font-size: 2.5em;
+}
+
+.check-modal img{
+    width: 90%;
+    max-width: 300px;
+}
